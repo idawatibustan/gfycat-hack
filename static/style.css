@@ -1,11 +1,22 @@
-.logo {
-    display: block;
-    width: 120px;
-    top: 0px;
-    left: 0;
-    margin: auto;
-    padding: 10px;
+.top-banner {
+    text-align: center;
     z-index: 1;
+}
+.top-iconleft {
+    height:40px;
+    float:left;
+    padding: 10px;
+}
+.logo {
+    display: inline-block;
+    height: 40px;
+    margin: 0 auto;
+    padding: 10px;
+}
+.top-iconright {
+    height:40px;
+    float:right;
+    padding: 10px;
 }
 /* Design of a card */
 .card {
@@ -155,7 +166,8 @@ li span {
 }
 body {
   position: relative;
-  max-width: 100%;
+  max-width: 360px;
+  width:100%;
   overflow: hidden;
   font-family: helvetica, arial, sans-serif;
   /*background: #333;
