@@ -153,7 +153,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
           likes.classList.add("c_likes");
           tags.classList.add("c_tags");
           title.classList.add("c_title");
-          userName.classList.add("c_title");
+          userName.classList.add("c_username");
           createDate.innerText = data["createDate"];
           description.innerText = data["description"];
           dislikes.innerText = data["dislikes"];
