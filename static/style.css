@@ -82,6 +82,7 @@ li span {
 
 .c_likes > *, .c_dislikes > * {
     display: inline-block;
+    margin: 0 5px 0 0;
 }
 
 .c_tags {
