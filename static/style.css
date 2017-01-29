@@ -1,9 +1,11 @@
 .logo {
-    position: absolute;
-    width: 100px;
-    top: 35px;
-    margin-left: -50px;
-    left: 50%;
+    display: block;
+    width: 120px;
+    top: 0px;
+    left: 0;
+    margin: auto;
+    padding: 10px;
+    z-index: 1;
 }
 /* Design of a card */
 .card {
@@ -17,11 +19,11 @@
   transform-origin: 50% 99%;
 }
 .cardcontainer {
-  padding: 10px;
+  padding: 0;
   text-align: left;
-  width: 300px;
-  max-width: 300px;
-  margin: 80px auto 0 auto;
+  width: 90%;
+  margin: auto;
+  z-index: 2;
 }
 
 li span {
@@ -36,11 +38,10 @@ li span {
 
 /* List functionality */
 .list .cardlist {
-  margin: 0 0 0 15px;
+  margin: 0;
   padding: 0;
-  max-width: 300px;
-  width: 300px;
-  height: 420px;
+  width: 100%;
+  height: auto;
 }
 .tinderesque .list .card {
   display: none;
@@ -51,10 +52,7 @@ li span {
 
 .current {
     border: 1px solid #ccc;
-    width: 300px;
-    height: 325px;
-    border-radius: 10px;
-    margin-top: 10px;
+    width: 100%;
 }
 
 /* Button designs */
@@ -158,12 +156,13 @@ li span {
   }
 }
 body {
-    max-width: 300px;
-    overflow: hidden;
+  position: relative;
+  max-width: 100%;
+  overflow: hidden;
   font-family: helvetica, arial, sans-serif;
   /*background: #333;
   background: linear-gradient(#333,#666);*/
-  background: #fff;
+  background: #404040;
   color: #666;
   font-size: 16px;
   padding: 0;
