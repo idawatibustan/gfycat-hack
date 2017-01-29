@@ -4,7 +4,7 @@
 }
 .top-iconleft {
     height:40px;
-    float:left;
+    float: left;
     padding: 10px;
 }
 .logo {
@@ -15,7 +15,7 @@
 }
 .top-iconright {
     height:40px;
-    float:right;
+    float: right;
     padding: 10px;
 }
 /* Design of a card */
@@ -176,7 +176,7 @@ body {
   color: #666;
   font-size: 16px;
   padding: 0;
-  margin: 0;
+  margin: auto;
 }
 header, section, footer {
   display: block;
