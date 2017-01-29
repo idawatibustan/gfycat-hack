@@ -37,10 +37,10 @@ def auth():
 def auth_session():
     auth_payload = {
             "grant_type": "password",
-            "client_id": "2_TFxMYd",
-            "client_secret": "2Bi85rvk6bzTCFHZ7Z5rsTw2lHEPCEBA4z2XZ7fcTtw6NzdwT_b7TDxGU6NgQ313",
-            "username": "louis.wong",
-            "password": "wongkokwoo123"
+            "client_id": client_id,
+            "client_secret": client_secret,
+            "username": username,
+            "password": password
             }
 
     r = s.post("https://api.gfycat.com/v1/oauth/token", data=json.dumps(auth_payload))
@@ -49,6 +49,9 @@ def auth_session():
     at = data["access_token"]
     print "lovely: " + at
     return s
+
+def returnerror(message):
+    return {"error": str(message)}
 
 def to_json(data):
     returnobj = {'results': len(data), 'data': []}
@@ -87,6 +90,19 @@ def get_trending_tag(tag, count):
     r = requests.get('https://api.gfycat.com/v1/gfycats/trending?access_token=' + at + '&count=' + str(count) + '&tagName=' + tag)
     data = json.loads(r.text)
     return  data
+
+# http://localhost:8000/api/get_trending_tag_testing?tag=gaming&count=5
+@app.route('/api/get_trending_tag', methods=['GET'])
+def get_trending_tag_testing():
+    # **********************************************
+    # Always get the access token because - hackathon
+    at = auth()
+    # **********************************************
+    tag = request.args.get("tag")
+    count = request.args.get("count")
+    r = requests.get('https://api.gfycat.com/v1/gfycats/trending?access_token=' + at + '&count=' + str(count) + '&tagName=' + tag)
+    data = json.loads(r.text)
+    return  to_json(data["gfycats"])
 
 # http://localhost:8000/api/get_trending?count=5
 @app.route('/api/get_trending', methods=['GET'])
