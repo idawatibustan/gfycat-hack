@@ -1,4 +1,5 @@
-(function(){
+document.addEventListener("DOMContentLoaded", function(event) { 
+(function() {
   var animating = false;
 
   function animatecard(ev) {
@@ -83,27 +84,39 @@
   window.addEventListener('DOMContentLoaded', function(){
     document.body.classList.add('tinderesque');
   });
-document.body.addEventListener('nopecard', function(ev) {
-    var container = ev.detail.container;
-    var label = container.querySelector('.nopes');
-    if (label) {
-      var nopes = +container.nopes || 0;
-      nopes++;
-      container.nopes = nopes;
-      label.innerHTML = container.nopes;
-    }
-});
-document.body.addEventListener('yepcard', function(ev) {
-    var container = ev.detail.container;
-    var label = container.querySelector('.yays');
-    if (label) {
-      var yeps = +container.yeps || 0;
-      yeps++;
-      container.yeps = yeps;
-      label.innerHTML = container.yeps;
-    }
-});
-document.body.addEventListener('deckempty', function(ev) {
-        location.reload();
-});
+  document.body.addEventListener('nopecard', function(ev) {
+      var container = ev.detail.container;
+      var label = container.querySelector('.nopes');
+      if (label) {
+        var nopes = +container.nopes || 0;
+        nopes++;
+        container.nopes = nopes;
+        label.innerHTML = container.nopes;
+      }
+  });
+  document.body.addEventListener('yepcard', function(ev) {
+      var container = ev.detail.container;
+      var label = container.querySelector('.yays');
+      if (label) {
+        var yeps = +container.yeps || 0;
+        yeps++;
+        container.yeps = yeps;
+        label.innerHTML = container.yeps;
+      }
+  });
+  document.body.addEventListener('deckempty', function(ev) {
+          location.reload();
+  });
+  function getData(url) {
+      var xmlhttp;
+      xmlhttp = new XMLHttpRequest();
+      xmlhttp.onreadystatechange = function(){
+          if (xmlhttp.readyState == 4 && xmlhttp.status == 200){
+              console.log(xmlhttp.responseText);
+          }
+      }
+      xmlhttp.open("GET", url, true);
+      xmlhttp.send();
+  }
 })();
+});
