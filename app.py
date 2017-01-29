@@ -11,5 +11,9 @@ app.secret_key = os.urandom(24).encode("hex")
 def home():
     return render_template("index.html")
 
+@app.route("/next_card")
+def next_card():
+    return json.dumps({"Hello": "world"})
+
 http_server = WSGIServer(("", PORT), app)
 http_server.serve_forever()
