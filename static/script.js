@@ -92,6 +92,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
         nopes++;
         container.nopes = nopes;
         label.innerHTML = container.nopes;
+        // request("/send_update?id={id}&act=no", "POST");
       }
   });
   document.body.addEventListener('yepcard', function(ev) {
@@ -141,24 +142,38 @@ document.addEventListener("DOMContentLoaded", function(event) {
           var createDate = document.createElement("span");
           var description = document.createElement("span");
           var dislikes = document.createElement("span");
+          var dislikes_icon = document.createElement("i");
+          var dislikes_text = document.createElement("span");
           var gId = document.createElement("span");
           var likes = document.createElement("span");
+          var likes_icon = document.createElement("i");
+          var likes_text = document.createElement("span");
           var tags = document.createElement("span");
           var title = document.createElement("span");
           var userName = document.createElement("span");
           createDate.classList.add("c_createDate");
           description.classList.add("c_description");
           dislikes.classList.add("c_dislikes");
+          dislikes_icon.classList.add("material-icons");
+          dislikes_text.classList.add("c_likes_text");
           gId.classList.add("c_id");
           likes.classList.add("c_likes");
+          likes_icon.classList.add("material-icons");
+          likes_text.classList.add("c_likes_text");
           tags.classList.add("c_tags");
           title.classList.add("c_title");
           userName.classList.add("c_username");
           createDate.innerText = data["createDate"];
           description.innerText = data["description"];
-          dislikes.innerText = data["dislikes"];
+          dislikes_icon.innerText = "close";
+          dislikes_text.innerText = data["dislikes"];
+          dislikes.appendChild(dislikes_icon);
+          dislikes.appendChild(dislikes_text);
+          likes_icon.innerText = "favorite";
+          likes_text.innerText = data["likes"];
+          likes.appendChild(likes_icon);
+          likes.appendChild(likes_text);
           gId.innerText = data["id"];
-          likes.innerText = data["likes"];
           data["tags"].forEach(function(tag) {
               var tag_el = document.createElement("span");
               tag_el.innerText = tag;
