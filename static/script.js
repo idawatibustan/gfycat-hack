@@ -176,7 +176,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
           gId.innerText = data["id"];
           data["tags"].forEach(function(tag) {
               var tag_el = document.createElement("span");
-              tag_el.innerText = tag;
+              tag_el.innerText = "#" + tag;
               tags.appendChild(tag_el);
           });
           title.innerText = data["title"];

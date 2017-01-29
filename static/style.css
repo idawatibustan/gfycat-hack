@@ -61,8 +61,48 @@ li span {
 }
 
 .current {
-    border: 1px solid #888;
+    border: 1px solid #555;
     width: 100%;
+    border-radius: 5px;
+}
+
+.c_createDate,
+.c_description,
+.c_title,
+.c_id,
+.c_username {
+    display: none;
+}
+
+.content_container > span {
+    font-size: 30px;
+    position: absolute;
+    top: 353px;
+}
+
+.c_likes > *, .c_dislikes > * {
+    display: inline-block;
+}
+
+.c_tags {
+    width: 140px;
+    height: 35px;
+    left: 40px;
+}
+
+.c_tags > * {
+    font-size: 14px;
+    display: inline-block;
+    margin: 0 5px 0 0;
+    text-decoration: underline;
+}
+
+.c_likes {
+    right: 40px;
+}
+
+.c_dislikes {
+    right: 110px;
 }
 
 /* Button designs */
