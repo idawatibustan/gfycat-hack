@@ -1,11 +1,12 @@
 .top-banner {
+    width:90%;
     text-align: center;
     z-index: 1;
 }
 .top-iconleft {
-    height:40px;
+    height:28px;
     float: left;
-    padding: 10px;
+    padding: 16px 0;
 }
 .logo {
     display: inline-block;
@@ -14,9 +15,9 @@
     padding: 10px;
 }
 .top-iconright {
-    height:40px;
+    height:28px;
     float: right;
-    padding: 10px;
+    padding: 16px 0;
 }
 /* Design of a card */
 .card {
@@ -60,7 +61,7 @@ li span {
 }
 
 .current {
-    border: 1px solid #ccc;
+    border: 1px solid #888;
     width: 100%;
 }
 
@@ -167,7 +168,9 @@ li span {
 body {
   position: relative;
   max-width: 360px;
+  max-height: 560px;
   width:100%;
+  height:100%;
   overflow: hidden;
   font-family: helvetica, arial, sans-serif;
   /*background: #333;
@@ -216,16 +219,17 @@ footer {
 .card {
   /*background: powderblue;*/
   width: 100%;
-  height: 100%
+  height: 100%;
   overflow: hidden;
 }
 .image_container {
     width: 100%;
-    height: 230px;
+    height: 75%;
     background-size: cover;
     background-position: center center;
 }
 .content_container {
+    height: 25%;
     padding: 10px;
     overflow-y: auto;
 }
