@@ -180,6 +180,9 @@ document.addEventListener("DOMContentLoaded", function(event) {
           data["tags"].forEach(function(tag) {
               var tag_el = document.createElement("span");
               tag_el.innerText = "#" + tag;
+              if (tag === "Ads") {
+                  tag_el.classList.add("ribbon");
+              }
               tags.appendChild(tag_el);
           });
           title.innerText = data["title"];
