@@ -1,4 +1,4 @@
-from flask import Flask, request, redirect, url_for, session
+from flask import Flask, render_template, request, redirect, url_for, session
 from gevent.wsgi import WSGIServer
 from settings import *
 import os
@@ -9,7 +9,7 @@ app.secret_key = os.urandom(24).encode("hex")
 
 @app.route("/")
 def home():
-    return json.dumps({"Hello": "World"})
+    return render_template("index.html")
 
 http_server = WSGIServer(("", PORT), app)
 http_server.serve_forever()
