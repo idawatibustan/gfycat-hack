@@ -134,7 +134,10 @@ document.addEventListener("DOMContentLoaded", function(event) {
           }
           var img_container = document.createElement("div");
           img_container.classList.add("image_container");
-          img_container.style = "background-image: url('" + data["url"] + "')";
+          //img_container.style = "background-image: url('" + data["url"] + "')";
+          var img = document.createElement("img");
+          img["src"] = data["url"];
+          img_container.append(img);
           li.appendChild(img_container);
           var content_container = document.createElement("div");
           content_container.classList.add("content_container");

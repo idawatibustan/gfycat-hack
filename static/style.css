@@ -118,9 +118,11 @@ li span {
 }
 
 .cardcontainer button {
-  background-image: url("http://media.148apps.com/screenshots/547702041/us-iphone-1-tinder.jpeg");
   background-repeat: no-repeat;
-  border: 10px solid #efefef;
+  background-size: 100%;
+  /*border: 10px solid #efefef;*/
+  background-color: #404040;
+  border: none;
   color: #fff;
   border-radius: 50% 50%;
   width: 100px;
@@ -132,21 +134,34 @@ li span {
 .cardcontainer button:focus {
   outline: 0;
 }
+.bookmark {
+    position: absolute;
+    left: 20px;
+    bottom: 55px;
+    width: 60px;
+}
+.share {
+    position: absolute;
+    right: 20px;
+    bottom: 55px;
+    width: 60px;
+}
 .cardcontainer .but-nope {
-    background-position: -222px -1018px;
+    background-image: url("/static/img/dislike.png");
     position: absolute;
     bottom: 15px;
-    left: 60px;
+    left: 74px;
 }
 .cardcontainer .but-nope:focus {
+    background-image: url("/static/img/dislike.png");
   outline: 0;
 }
 
 .cardcontainer .but-yay {
-    background-position: -338px -1020px;
+    background-image: url("/static/img/like.png");
     position: absolute;
     bottom: 15px;
-    right: 60px;
+    right: 74px;
 }
 
 .tinderesque .cardcontainer.yes .card {
@@ -264,10 +279,18 @@ footer {
   overflow: hidden;
 }
 .image_container {
-    width: 100%;
+    width: 500%;
+    margin-left: Calc(-250% + 165px);
     height: 75%;
     background-size: cover;
     background-position: center center;
+    background-attachment: scroll;
+    text-align: center;
+}
+.image_container img {
+    display: inline-block;
+    height: 100%;
+    margin: auto;
 }
 .content_container {
     height: 25%;
