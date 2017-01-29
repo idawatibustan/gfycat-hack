@@ -1,224 +1,224 @@
-            .logo {
-                position: absolute;
-                width: 100px;
-                top: 35px;
-                margin-left: -50px;
-                left: 50%;
-            }
-            /* Design of a card */
-            .card {
-              /*font-size: 14px;*/
-              /*line-height: 200px;*/
-              /*text-align:center;*/
-              width: 300px;
-              height: 400px;
-              display: block;
-              -webkit-transform-origin: 50% 99%;
-              transform-origin: 50% 99%;
-            }
-            .cardcontainer {
-              padding: 10px;
-              text-align: left;
-              width: 300px;
-              max-width: 300px;
-              margin: 80px auto 0 auto;
-            }
+.logo {
+    position: absolute;
+    width: 100px;
+    top: 35px;
+    margin-left: -50px;
+    left: 50%;
+}
+/* Design of a card */
+.card {
+  /*font-size: 14px;*/
+  /*line-height: 200px;*/
+  /*text-align:center;*/
+  width: 300px;
+  height: 400px;
+  display: block;
+  -webkit-transform-origin: 50% 99%;
+  transform-origin: 50% 99%;
+}
+.cardcontainer {
+  padding: 10px;
+  text-align: left;
+  width: 300px;
+  max-width: 300px;
+  margin: 80px auto 0 auto;
+}
 
-            li span {
-                display: block;
-            }
-            .s_name {
-                font-size: 20px;
-            }
-            .s_description {
-                margin-top: 10px;
-            }
+li span {
+    display: block;
+}
+.s_name {
+    font-size: 20px;
+}
+.s_description {
+    margin-top: 10px;
+}
 
-            /* List functionality */
-            .list .cardlist {
-              margin: 0 0 0 15px;
-              padding: 0;
-              max-width: 300px;
-              width: 300px;
-              height: 420px;
-            }
-            .tinderesque .list .card {
-              display: none;
-            }
-            .tinderesque .list .current {
-              display: block;
-            }
+/* List functionality */
+.list .cardlist {
+  margin: 0 0 0 15px;
+  padding: 0;
+  max-width: 300px;
+  width: 300px;
+  height: 420px;
+}
+.tinderesque .list .card {
+  display: none;
+}
+.tinderesque .list .current {
+  display: block;
+}
 
-            .current {
-                border: 1px solid #ccc;
-                width: 300px;
-                height: 325px;
-                border-radius: 10px;
-                margin-top: 10px;
-            }
+.current {
+    border: 1px solid #ccc;
+    width: 300px;
+    height: 325px;
+    border-radius: 10px;
+    margin-top: 10px;
+}
 
-            /* Button designs */
+/* Button designs */
 
-            .but-nope, .but-yay, .nopes, .yays {
-              display: none;
-            }
+.but-nope, .but-yay, .nopes, .yays {
+  display: none;
+}
 
-            .tinderesque .but-nope, .tinderesque .but-yay,
-            .tinderesque .nopes, .tinderesque .yays {
-              display: inline-block;
-            }
+.tinderesque .but-nope, .tinderesque .but-yay,
+.tinderesque .nopes, .tinderesque .yays {
+  display: inline-block;
+}
 
-            .cardcontainer button {
-              background-image: url("http://media.148apps.com/screenshots/547702041/us-iphone-1-tinder.jpeg");
-              background-repeat: no-repeat;
-              border: 10px solid #efefef;
-              color: #fff;
-              border-radius: 50% 50%;
-              width: 100px;
-              height: 100px;
-              line-height: 30px;
-              margin: 0 .5em;
-              display: inline-block;
-            }
-            .cardcontainer button:focus {
-              outline: 0;
-            }
-            .cardcontainer .but-nope {
-                background-position: -222px -1018px;
-                position: absolute;
-                bottom: 15px;
-                left: 60px;
-            }
-            .cardcontainer .but-nope:focus {
-              outline: 0;
-            }
+.cardcontainer button {
+  background-image: url("http://media.148apps.com/screenshots/547702041/us-iphone-1-tinder.jpeg");
+  background-repeat: no-repeat;
+  border: 10px solid #efefef;
+  color: #fff;
+  border-radius: 50% 50%;
+  width: 100px;
+  height: 100px;
+  line-height: 30px;
+  margin: 0 .5em;
+  display: inline-block;
+}
+.cardcontainer button:focus {
+  outline: 0;
+}
+.cardcontainer .but-nope {
+    background-position: -222px -1018px;
+    position: absolute;
+    bottom: 15px;
+    left: 60px;
+}
+.cardcontainer .but-nope:focus {
+  outline: 0;
+}
 
-            .cardcontainer .but-yay {
-                background-position: -338px -1020px;
-                position: absolute;
-                bottom: 15px;
-                right: 60px;
-            }
+.cardcontainer .but-yay {
+    background-position: -338px -1020px;
+    position: absolute;
+    bottom: 15px;
+    right: 60px;
+}
 
-            .tinderesque .cardcontainer.yes .card {
-              -webkit-animation: yay 0.7s ease-out;
-              animation: yay 0.7s ease-out;
-            }
-            .tinderesque .cardcontainer.nope .card {
-              -webkit-animation: nope 0.7s ease-out;
-              animation: nope 0.7s ease-out;
-            }
+.tinderesque .cardcontainer.yes .card {
+  -webkit-animation: yay 0.7s ease-out;
+  animation: yay 0.7s ease-out;
+}
+.tinderesque .cardcontainer.nope .card {
+  -webkit-animation: nope 0.7s ease-out;
+  animation: nope 0.7s ease-out;
+}
 
 
-            /*
-              Animations, isn't it 'fun' to repeat all of that, just for Safari? :)
-            */
+/*
+  Animations, isn't it 'fun' to repeat all of that, just for Safari? :)
+*/
 
-            @keyframes yay {
-              from {
-                transform: rotate(0deg);
-                opacity: 1;
-              }
-              to {
-                transform: rotate(40deg) translateY(-80px);
-                opacity: 0;
-              }
-            }
+@keyframes yay {
+  from {
+    transform: rotate(0deg);
+    opacity: 1;
+  }
+  to {
+    transform: rotate(40deg) translateY(-80px);
+    opacity: 0;
+  }
+}
 
-            @-webkit-keyframes yay {
-              from {
-                -webkit-transform: rotate(0deg);
-                opacity: 1;
-              }
-              to {
-                -webkit-transform: rotate(40deg) translateY(-80px);
-                opacity: 0;
-              }
-            }
+@-webkit-keyframes yay {
+  from {
+    -webkit-transform: rotate(0deg);
+    opacity: 1;
+  }
+  to {
+    -webkit-transform: rotate(40deg) translateY(-80px);
+    opacity: 0;
+  }
+}
 
-            @keyframes nope {
-              from {
-                transform: rotate(0deg);
-                opacity: 1;
-              }
-              to {
-                transform: rotate(-40deg) translateY(-80px);
-                opacity: 0;
-              }
-            }
+@keyframes nope {
+  from {
+    transform: rotate(0deg);
+    opacity: 1;
+  }
+  to {
+    transform: rotate(-40deg) translateY(-80px);
+    opacity: 0;
+  }
+}
 
-            @-webkit-keyframes nope {
-              from {
-                -webkit-transform: rotate(0deg);
-                opacity: 1;
-              }
-              to {
-                -webkit-transform: rotate(-40deg) translateY(-80px);
-                opacity: 0;
-              }
-            }
-            body {
-                max-width: 300px;
-                overflow: hidden;
-              font-family: helvetica, arial, sans-serif;
-              /*background: #333;
-              background: linear-gradient(#333,#666);*/
-              background: #fff;
-              color: #666;
-              font-size: 16px;
-              padding: 0;
-              margin: 0;
-            }
-            header, section, footer {
-              display: block;
-              padding: 0.5em 1em;
-            }
-            header, footer {
-              background: #000;
-              background: linear-gradient(#111,#000);
-            }
-            a {color: lime;}
-            h1, h2 {
-              color: #f8f8f8;
-              font-size: 24px;
-              font-weight: normal;
-            }
-            h2 {font-size: 20px;}
-            .floaty .cardcontainer {
-              float: left;
-            }
-            h2 {clear: both;}
-            footer, header, section {
-              display: block;
-            }
-            footer {
-              font-size: 10px;
-              text-align: right;
-              padding: 3em 0.5em 1em 0.5em;
-            }
-            .nobutton:hover .yes {
-              -webkit-animation: yay 0.7s ease-out;
-              animation: yay 0.7s ease-out;
-            }
-            .nobutton:hover .nope {
-              -webkit-animation: nope 0.7s ease-out;
-              animation: nope 0.7s ease-out;
-            }
-            .card {
-              /*background: powderblue;*/
-              max-width: 300px;
-              overflow: hidden;
-            }
-            .image_container {
-                width: 100%;
-                height: 230px;
-                background-size: cover;
-                background-position: center center;
-            }
-            .content_container {
-                padding: 10px;
-                overflow-y: auto;
-            }
-            .list ul.cardlist {
-              padding-bottom: 10px;
-            }
+@-webkit-keyframes nope {
+  from {
+    -webkit-transform: rotate(0deg);
+    opacity: 1;
+  }
+  to {
+    -webkit-transform: rotate(-40deg) translateY(-80px);
+    opacity: 0;
+  }
+}
+body {
+    max-width: 300px;
+    overflow: hidden;
+  font-family: helvetica, arial, sans-serif;
+  /*background: #333;
+  background: linear-gradient(#333,#666);*/
+  background: #fff;
+  color: #666;
+  font-size: 16px;
+  padding: 0;
+  margin: 0;
+}
+header, section, footer {
+  display: block;
+  padding: 0.5em 1em;
+}
+header, footer {
+  background: #000;
+  background: linear-gradient(#111,#000);
+}
+a {color: lime;}
+h1, h2 {
+  color: #f8f8f8;
+  font-size: 24px;
+  font-weight: normal;
+}
+h2 {font-size: 20px;}
+.floaty .cardcontainer {
+  float: left;
+}
+h2 {clear: both;}
+footer, header, section {
+  display: block;
+}
+footer {
+  font-size: 10px;
+  text-align: right;
+  padding: 3em 0.5em 1em 0.5em;
+}
+.nobutton:hover .yes {
+  -webkit-animation: yay 0.7s ease-out;
+  animation: yay 0.7s ease-out;
+}
+.nobutton:hover .nope {
+  -webkit-animation: nope 0.7s ease-out;
+  animation: nope 0.7s ease-out;
+}
+.card {
+  /*background: powderblue;*/
+  max-width: 300px;
+  overflow: hidden;
+}
+.image_container {
+    width: 100%;
+    height: 230px;
+    background-size: cover;
+    background-position: center center;
+}
+.content_container {
+    padding: 10px;
+    overflow-y: auto;
+}
+.list ul.cardlist {
+  padding-bottom: 10px;
+}
