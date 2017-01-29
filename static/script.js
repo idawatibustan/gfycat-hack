@@ -102,13 +102,13 @@ document.addEventListener("DOMContentLoaded", function(event) {
       case 0:
         elem.src = getSrcString("empty");
         break;
-      case 1;
+      case 1:
         elem.src = getSrcString("20");
         break;
       case 2:
         elem.src = getSrcString("40");
         break;
-      case 3;
+      case 3:
         elem.src = getSrcString("60");
         break;
       case 4:
