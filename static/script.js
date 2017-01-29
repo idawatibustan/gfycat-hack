@@ -186,6 +186,8 @@ document.addEventListener("DOMContentLoaded", function(event) {
           li.appendChild(img_container);
           var content_container = document.createElement("div");
           content_container.classList.add("content_container");
+          var ribbonspan = document.createElement("span");
+          ribbonspan.classList.add("ads");
           // Most tedious part is here
           var createDate = document.createElement("span");
           var description = document.createElement("span");
@@ -224,11 +226,14 @@ document.addEventListener("DOMContentLoaded", function(event) {
           gId.innerText = data["id"];
           data["tags"].forEach(function(tag) {
               var tag_el = document.createElement("span");
-              tag_el.innerText = "#" + tag;
               if (tag === "Ads") {
-                  tag_el.classList.add("ribbon");
+                    tag_el.innerText = "Sponsored post";
+                    tag_el.classList.add("ribbon");
+                    ribbonspan.appendChild(tag_el);
+              } else {
+                    tag_el.innerText = "#" + tag;
+                    tags.appendChild(tag_el);
               }
-              tags.appendChild(tag_el);
           });
           title.innerText = data["title"];
           userName.innerText = data["userName"];
@@ -241,6 +246,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
           content_container.appendChild(title);
           content_container.appendChild(userName);
           // Ends here
+          li.appendChild(ribbonspan);
           li.appendChild(content_container);
           container.appendChild(li);
           console.log(data);
