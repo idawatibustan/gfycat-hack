@@ -82,8 +82,13 @@ document.addEventListener("DOMContentLoaded", function(event) {
   var counter = 0;
 
   function maybeMakeOverlay() {
-    if (counter == 1) {
-      document.getElementById("overlay").style.display = "block";
+    if (counter == 5) {
+      var elem = document.getElementById("overlay");
+      elem.style.display = "block";
+      counter = 0;
+      elem.addEventListener('click', function() {
+        elem.style.display = 'none';
+      })
     }
   }
 
