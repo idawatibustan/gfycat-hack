@@ -15,7 +15,7 @@ def home():
 
 @app.route("/get_cards")
 def get_cards():
-    data = json.loads(open("sample.json").read())
+    data = json.loads(open("sample_final.json").read())
     return json.dumps(data)
 
 def auth():
@@ -59,8 +59,8 @@ def to_json(data):
         try:
             returnobj['data'].append({
                 "id": gfy["gfyId"], "likes": gfy["likes"], "dislikes": gfy["dislikes"],
-                "url": gfy["gifUrl"], "tags":gfy["tags"], "userName": gfy["userName"], 
-                "title": gfy["title"], "description": gfy["description"], "createDate": gfy["createDate"]
+                "url_high": gfy["gifUrl"], "tags":gfy["tags"], "userName": gfy["userName"], 
+                "title": gfy["title"], "description": gfy["description"], "createDate": gfy["createDate"], "url":gfy["max2mbGif"]
             })
         except Exception, e:
             returnobj['data'].append(returnerror(str(e)))
@@ -78,7 +78,7 @@ def update_user_json(tags):
     with open('user.json', 'w') as f:
         f.write(json.dumps(json_data))  
 
-# http://localhost:8000/api/get_trending_tag?tag=gaming?count=5
+# http://localhost:8000/api/get_trending_tag?count=5
 # @app.route('/api/get_trending_tag', methods=['GET'])
 def get_trending_tag(tag, count):
     # **********************************************
