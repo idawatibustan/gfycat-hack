@@ -147,16 +147,27 @@ li span {
     width: 60px;
 }
 
+.title_badge {
+    width:300px;
+    margin: 0 auto;
+    padding: 15px;
+}
+
 .badge {
     background-image: url("http://1.static.upcoming.nl/static/images/ca21bfd926_1391695509_Kriebelt-je-muisarm-al.gif");
+    background-color: transparent;
     background-size: cover;
-    background-position: center center;margin: auto;
+    background-position: center center;
+    margin: auto;
     width:300px;
-    height:100px;
+    height:300px;
     border: 1px solid #555;
     border-radius: 150px;
 }
 
+.share_badge {
+
+}
 
 .cardcontainer .but-nope {
     background-image: url("/static/img/dislike.png");
