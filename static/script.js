@@ -112,11 +112,73 @@ document.addEventListener("DOMContentLoaded", function(event) {
       xmlhttp = new XMLHttpRequest();
       xmlhttp.onreadystatechange = function(){
           if (xmlhttp.readyState == 4 && xmlhttp.status == 200){
-              console.log(xmlhttp.responseText);
+              JSON.parse(xmlhttp.responseText)["data"].forEach(function(o){
+                  cards.add_card(o);
+              });
           }
       }
       xmlhttp.open("GET", url, true);
       xmlhttp.send();
   }
+  getData("/next_card");
+  var cards = {
+      started: false,
+      add_card: function(data) {
+          var container = document.querySelector(".cardlist");
+          var li = document.createElement("li");
+          li.classList.add("card");
+          if (this.started === false) {
+              li.classList.add("current");
+              this.started = true;
+          }
+          var img_container = document.createElement("div");
+          img_container.classList.add("image_container");
+          img_container.style = "background-image: url('" + data["url"] + "')";
+          li.appendChild(img_container);
+          var content_container = document.createElement("div");
+          content_container.classList.add("content_container");
+          // Most tedious part is here
+          var createDate = document.createElement("span");
+          var description = document.createElement("span");
+          var dislikes = document.createElement("span");
+          var gId = document.createElement("span");
+          var likes = document.createElement("span");
+          var tags = document.createElement("span");
+          var title = document.createElement("span");
+          var userName = document.createElement("span");
+          createDate.classList.add("c_createDate");
+          description.classList.add("c_description");
+          dislikes.classList.add("c_dislikes");
+          gId.classList.add("c_id");
+          likes.classList.add("c_likes");
+          tags.classList.add("c_tags");
+          title.classList.add("c_title");
+          userName.classList.add("c_title");
+          createDate.innerText = data["createDate"];
+          description.innerText = data["description"];
+          dislikes.innerText = data["dislikes"];
+          gId.innerText = data["id"];
+          likes.innerText = data["likes"];
+          data["tags"].forEach(function(tag) {
+              var tag_el = document.createElement("span");
+              tag_el.innerText = tag;
+              tags.appendChild(tag_el);
+          });
+          title.innerText = data["title"];
+          userName.innerText = data["userName"];
+          content_container.appendChild(createDate);
+          content_container.appendChild(description);
+          content_container.appendChild(dislikes);
+          content_container.appendChild(gId);
+          content_container.appendChild(likes);
+          content_container.appendChild(tags);
+          content_container.appendChild(title);
+          content_container.appendChild(userName);
+          // Ends here
+          li.appendChild(content_container);
+          container.appendChild(li);
+          console.log(data);
+      }
+  };
 })();
 });

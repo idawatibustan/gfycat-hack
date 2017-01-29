@@ -13,7 +13,8 @@ def home():
 
 @app.route("/next_card")
 def next_card():
-    return json.dumps({"Hello": "world"})
+    data = json.loads(open("sample.json").read())
+    return json.dumps(data)
 
 http_server = WSGIServer(("", PORT), app)
 http_server.serve_forever()
