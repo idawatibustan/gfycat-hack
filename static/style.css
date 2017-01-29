@@ -1,7 +1,6 @@
 .top-banner {
     width:90%;
     text-align: center;
-    z-index: 1;
 }
 .top-iconleft {
     height:28px;
@@ -33,7 +32,6 @@
   text-align: left;
   width: 90%;
   margin: auto;
-  z-index: 2;
 }
 
 li span {
