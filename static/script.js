@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", function(event) { 
+document.addEventListener("DOMContentLoaded", function(event) {
 (function() {
   var animating = false;
 
@@ -78,6 +78,15 @@ document.addEventListener("DOMContentLoaded", function(event) {
       }
     }
   }
+
+  var counter = 0;
+
+  function maybeMakeOverlay() {
+    if (counter == 1) {
+      document.getElementById("overlay").style.display = "block";
+    }
+  }
+
   document.body.addEventListener('animationend', animationdone);
   document.body.addEventListener('webkitAnimationEnd', animationdone);
   document.body.addEventListener('click', animatecard);
@@ -94,6 +103,8 @@ document.addEventListener("DOMContentLoaded", function(event) {
         label.innerHTML = container.nopes;
         // request("/send_update?id={id}&act=no", "POST");
       }
+      counter++;
+      maybeMakeOverlay();
   });
   document.body.addEventListener('yepcard', function(ev) {
       var container = ev.detail.container;
@@ -104,6 +115,8 @@ document.addEventListener("DOMContentLoaded", function(event) {
         container.yeps = yeps;
         label.innerHTML = container.yeps;
       }
+      counter++;
+      maybeMakeOverlay();
   });
   document.body.addEventListener('deckempty', function(ev) {
           location.reload();
