@@ -92,6 +92,31 @@ document.addEventListener("DOMContentLoaded", function(event) {
     }
   }
 
+  function replaceCatImage() {
+    function getSrcString(str) {
+      return "static/img/cat-" + str + ".png"
+    }
+
+    var elem = document.getElementById('cat-img');
+    switch (counter % 5) {
+      case 0:
+        elem.src = getSrcString("empty");
+        break;
+      case 1;
+        elem.src = getSrcString("20");
+        break;
+      case 2:
+        elem.src = getSrcString("40");
+        break;
+      case 3;
+        elem.src = getSrcString("60");
+        break;
+      case 4:
+        elem.src = getSrcString("80");
+        break;
+    }
+  }
+
   document.body.addEventListener('animationend', animationdone);
   document.body.addEventListener('webkitAnimationEnd', animationdone);
   document.body.addEventListener('click', animatecard);
@@ -109,6 +134,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
         // request("/send_update?id={id}&act=no", "POST");
       }
       counter++;
+      replaceCatImage();
       maybeMakeOverlay();
   });
   document.body.addEventListener('yepcard', function(ev) {
@@ -121,6 +147,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
         label.innerHTML = container.yeps;
       }
       counter++;
+      replaceCatImage();
       maybeMakeOverlay();
   });
   document.body.addEventListener('deckempty', function(ev) {
