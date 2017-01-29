@@ -146,6 +146,18 @@ li span {
     bottom: 55px;
     width: 60px;
 }
+
+.badge {
+    background-image: url("http://1.static.upcoming.nl/static/images/ca21bfd926_1391695509_Kriebelt-je-muisarm-al.gif");
+    background-size: cover;
+    background-position: center center;margin: auto;
+    width:300px;
+    height:100px;
+    border: 1px solid #555;
+    border-radius: 150px;
+}
+
+
 .cardcontainer .but-nope {
     background-image: url("/static/img/dislike.png");
     position: absolute;
