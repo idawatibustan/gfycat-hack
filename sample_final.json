@@ -1,19 +1,5 @@
 {
-	"data": [{
-		"createDate": 1485485077,
-		"description": "",
-		"dislikes": 0,
-		"id": "bleaksimplisticelkhound",
-		"ads": false,
-		"likes": "2",
-		"tags": [
-			"photoshopbattles"
-		],
-		"title": "Untitled",
-		"url": "https://thumbs.gfycat.com/BleakSimplisticElkhound-small.gif",
-		"url_high": "https://giant.gfycat.com/BleakSimplisticElkhound.gif",
-		"userName": "anonymous"
-	}, {
+	"data": [ {
 		"createDate": 1485449570,
 		"description": "",
 		"dislikes": "1",
