@@ -107,7 +107,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
   document.body.addEventListener('deckempty', function(ev) {
           location.reload();
   });
-  function getData(url) {
+  function request(url, rType) {
       var xmlhttp;
       xmlhttp = new XMLHttpRequest();
       xmlhttp.onreadystatechange = function(){
@@ -117,10 +117,10 @@ document.addEventListener("DOMContentLoaded", function(event) {
               });
           }
       }
-      xmlhttp.open("GET", url, true);
+      xmlhttp.open(rType, url, true);
       xmlhttp.send();
   }
-  getData("/next_card");
+  request("/get_cards", "GET");
   var cards = {
       started: false,
       add_card: function(data) {

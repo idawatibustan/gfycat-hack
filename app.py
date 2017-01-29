@@ -11,8 +11,8 @@ app.secret_key = os.urandom(24).encode("hex")
 def home():
     return render_template("index.html")
 
-@app.route("/next_card")
-def next_card():
+@app.route("/get_cards")
+def get_cards():
     data = json.loads(open("sample.json").read())
     return json.dumps(data)
 
