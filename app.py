@@ -149,5 +149,5 @@ def get_recommended():
 #     return gfycats_tag[0]
 
 
-http_server = WSGIServer(("", 8000), app)
+http_server = WSGIServer(("", PORT), app)
 http_server.serve_forever()
